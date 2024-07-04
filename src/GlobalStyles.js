@@ -62,15 +62,15 @@ const GlobalStyle = createGlobalStyle`
             &:nth-child(2) {
         
                 .image-holder {
-                    grid-row-start: 1;
-                    grid-row-end: 2;
-                    grid-column-start: 1;
+                    grid-row-start: 1 !important;
+                    grid-row-end: 2 !important;
+                    grid-column-start: 1 !important;
                 }
 
                 .text-holder {
-                    grid-row-start: 2;
-                    grid-row-end: 3;
-                    grid-column-start: 1;
+                    grid-row-start: 2 !important;
+                    grid-row-end: 3 !important;
+                    grid-column-start: 1 !important;
                 }
             }
         }
