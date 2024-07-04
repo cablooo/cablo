@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/cablo/static/js/main.4b056806.js",
+    "main.js": "/cablo/static/js/main.9a339270.js",
     "static/js/453.8463039d.chunk.js": "/cablo/static/js/453.8463039d.chunk.js",
     "static/media/ignite.png": "/cablo/static/media/ignite.6cd0473d7c91f1b07c34.png",
     "static/media/kitty kingdom.png": "/cablo/static/media/kitty kingdom.3d894db0763603740af0.png",
@@ -10,10 +10,10 @@
     "static/media/react_logo-512.png": "/cablo/static/media/react_logo-512.bebe05f2695a019a755c.png",
     "static/media/1_2.jpg": "/cablo/static/media/1_2.f71b82975299b8c615d3.jpg",
     "index.html": "/cablo/index.html",
-    "main.4b056806.js.map": "/cablo/static/js/main.4b056806.js.map",
+    "main.9a339270.js.map": "/cablo/static/js/main.9a339270.js.map",
     "453.8463039d.chunk.js.map": "/cablo/static/js/453.8463039d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4b056806.js"
+    "static/js/main.9a339270.js"
   ]
 }
