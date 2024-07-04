@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (max-width: 1300px) {
         .project-box {
-            grid-template-columns: 1fr;
+            display: block;
 
             &:nth-child(2) {
         
