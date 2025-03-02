@@ -8,7 +8,7 @@ const Projects = () => {
     const data = projectsData()
 
   return (
-    <StyledProjects>
+    <StyledProjects className='projects-container'>
         <div className="container">
             <h1 className="title">Projects</h1>
 

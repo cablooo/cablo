@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (max-width: 1300px) {
         .project-box {
-            display: block;
+            display: block !important;
 
             &:nth-child(2) {
         
@@ -86,6 +86,28 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    @media screen and (max-width: 920px) {
+        .about-me {
+            .container {
+                display: block;
+
+                .image-box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                }
+
+                .text-box {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 800px) {
         #cat-image {
             width: 10rem !important;
@@ -94,11 +116,30 @@ const GlobalStyle = createGlobalStyle`
         #line {
             display: none;
         }
+        
+        #line2 {
+            display: none;
+        }
 
         .about-me {
             .container {
                 width: 90%;
             }
+        }
+
+        .projects-container {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+
+                .project-container {
+                    display: block;
+                }
+            }
+        }
+
+        .my-email {
+            width: 100% !important;
         }
     }
 

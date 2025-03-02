@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <StyledFooter>
         <h3>There are more projects in my <a href='https://github.com/cablooo'>github account</a> if you like to see them</h3>
-        <h4>yosking22@gmail.com</h4>
+        <h4 className='my-email'>yosking22@gmail.com</h4>
     </StyledFooter>
   )
 }

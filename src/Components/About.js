@@ -16,7 +16,7 @@ const About = () => {
         <div className='text-box'>
           <h1>Hola, I'm cablo</h1>
           <p>
-            17 Years old, front-end developer and DMC lover
+            18 Years old, front-end developer
           </p>
           <img src={healthBar} alt="Health Bar" draggable="false" />
         </div>
