@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.js": "/cablo/static/js/main.55b0efa2.js",
+    "main.js": "/cablo/static/js/main.38727127.js",
     "static/js/453.8463039d.chunk.js": "/cablo/static/js/453.8463039d.chunk.js",
     "static/media/ignite.png": "/cablo/static/media/ignite.6cd0473d7c91f1b07c34.png",
+    "static/media/Screenshot (18).png": "/cablo/static/media/Screenshot (18).2962dc3ff8f5c6eddb3f.png",
     "static/media/kitty kingdom.png": "/cablo/static/media/kitty kingdom.3d894db0763603740af0.png",
     "static/media/musicapp.png": "/cablo/static/media/musicapp.f5903a322aacd19c723a.png",
     "static/media/sass-1-logo-png-transparent.png": "/cablo/static/media/sass-1-logo-png-transparent.c556a176a8b7d49fb670.png",
+    "static/media/tailwind.png": "/cablo/static/media/tailwind.1a534dc780c5cdd403a6.png",
+    "static/media/png-transparent-css-hd-logo-removebg-preview.png": "/cablo/static/media/png-transparent-css-hd-logo-removebg-preview.c20572f80214041f2ebb.png",
     "static/media/download copy.png": "/cablo/static/media/download copy.43f2f39cf9ae550edd03.png",
     "static/media/react_logo-512.png": "/cablo/static/media/react_logo-512.bebe05f2695a019a755c.png",
     "static/media/1_2.jpg": "/cablo/static/media/1_2.f71b82975299b8c615d3.jpg",
+    "static/media/html-512.png": "/cablo/static/media/html-512.9d8353ac720820ccbda6.png",
+    "static/media/JavaScript-logo.png": "/cablo/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
     "index.html": "/cablo/index.html",
-    "main.55b0efa2.js.map": "/cablo/static/js/main.55b0efa2.js.map",
+    "main.38727127.js.map": "/cablo/static/js/main.38727127.js.map",
     "453.8463039d.chunk.js.map": "/cablo/static/js/453.8463039d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.55b0efa2.js"
+    "static/js/main.38727127.js"
   ]
 }
