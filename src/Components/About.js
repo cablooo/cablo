@@ -1,5 +1,5 @@
 import React from 'react'
-import pfp from '../imgs/1_2.jpg'
+import pfp from '../imgs/pfp.jpg'
 import healthBar from '../imgs/pngtree-health-bar-png-image_6110933.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -14,9 +14,9 @@ const About = () => {
           <img src={pfp} alt="Profile Picture" />
         </div>
         <div className='text-box'>
-          <h1>Hola, I'm cablo</h1>
+          <h1>Hi, I'm Yousef Bafayad</h1>
           <p>
-            18 Years old, front-end developer
+            An 18 Years old, front-end developer from Saudi Arabia.
           </p>
           <img src={healthBar} alt="Health Bar" draggable="false" />
         </div>
@@ -62,7 +62,7 @@ const StyledAbout = styled(motion.div)`
         max-width: 300px;
         padding: 20px;
         border: 2px #4c4c4c solid;
-        border-radius: 5px;
+        border-radius: 50%;
         box-shadow: 0 0 8px #DADBDD;
         transition: transform 0.3s ease;
 
