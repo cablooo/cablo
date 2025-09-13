@@ -3,27 +3,27 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Footer = () => {
-  return (
-    <StyledFooter
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-        <motion.h3 
-          whileHover={{ scale: 1.02 }}
-          transition={{ type: "spring", stiffness: 300 }}
+    return (
+        <StyledFooter
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
         >
-            There are more projects in my <a href='https://github.com/cablooo' target="_blank" rel="noopener noreferrer">github account</a> if you like to see them
-        </motion.h3>
-        <motion.h4 
-          className='my-email'
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-            <a href="mailto:yosking22@gmail.com">yosking22@gmail.com</a>
-        </motion.h4>
-    </StyledFooter>
-  )
+            <motion.h3 
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
+                There are more projects in my <a href='https://github.com/cablooo' target="_blank" rel="noopener noreferrer">github account</a> if you like to see them
+            </motion.h3>
+            <motion.h4 
+                className='my-email'
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
+                <a href="mailto:yosking22@gmail.com">yosking22@gmail.com</a>
+            </motion.h4>
+        </StyledFooter>
+    )
 }
 
 const StyledFooter = styled(motion.div)`
@@ -104,6 +104,6 @@ const StyledFooter = styled(motion.div)`
             max-width: 250px;
         }
     }
-`
+`;
 
-export default Footer
+export default Footer;

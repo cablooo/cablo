@@ -1,17 +1,39 @@
-import { motion } from 'framer-motion'
-import React from 'react'
-import styled from 'styled-components'
+import { motion } from 'framer-motion';
+import React from 'react';
+import styled from 'styled-components';
+
+const projectVariants = {
+  hidden: { opacity: 0, scale: 0.95, y: 50 },
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    y: 0, 
+    transition: { 
+      type: "spring", 
+      stiffness: 100,
+      damping: 15
+    }
+  },
+};
 
 const Project = ({ name, description, url, icons, cover }) => {
   return (
-    <StyledProject className='project-box' 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <StyledProject 
+      className='project-box'
+      variants={projectVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      whileHover={{ scale: 1.02 }}
     >
       <div className='image-holder'>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <img src={cover} alt={name} />
+          <motion.img 
+            src={cover} 
+            alt={name} 
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          />
         </a>
       </div>
 
@@ -26,13 +48,18 @@ const Project = ({ name, description, url, icons, cover }) => {
         </p>
         <div className="icon-holder">
           {icons.map((icon, index) => (
-            <img key={index} src={icon} alt="Technology icon" />
+            <motion.img 
+              key={index} 
+              src={icon} 
+              alt="Technology icon" 
+              whileHover={{ scale: 1.2 }}
+            />
           ))}
         </div>
       </div>
     </StyledProject>
-  )
-}
+  );
+};
 
 const StyledProject = styled(motion.div)`
   display: grid;
@@ -52,11 +79,7 @@ const StyledProject = styled(motion.div)`
       width: 100%;
       height: auto;
       object-fit: cover;
-      transition: transform 0.3s ease;
-      
-      &:hover {
-        transform: scale(1.03);
-      }
+      transition: none;
     }
   }
 
@@ -85,11 +108,7 @@ const StyledProject = styled(motion.div)`
       img {
         width: 40px;
         height: 40px;
-        transition: transform 0.3s ease;
-        
-        &:hover {
-          transform: scale(1.1);
-        }
+        transition: none;
       }
     }
   }
@@ -105,6 +124,6 @@ const StyledProject = styled(motion.div)`
       }
     }
   }
-`
+`;
 
-export default Project
+export default Project;

@@ -1,40 +1,98 @@
-import React from 'react'
-import pfp from '../imgs/pfp.jpg'
-import healthBar from '../imgs/pngtree-health-bar-png-image_6110933.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import React from 'react';
+import pfp from '../imgs/pfp.jpg';
+import healthBar from '../imgs/pngtree-health-bar-png-image_6110933.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import styled, { keyframes } from 'styled-components'; // Import keyframes
+import { motion } from 'framer-motion';
+
+// Keyframe animation for the pulsating shadow
+const glow = keyframes`
+  0% {
+    box-shadow: 0 0 5px #DADBDD;
+  }
+  50% {
+    box-shadow: 0 0 15px #DADBDD, 0 0 20px #DADBDD;
+  }
+  100% {
+    box-shadow: 0 0 5px #DADBDD;
+  }
+`;
 
 const About = () => {
+  const imageVariants = {
+    initial: { scale: 1 },
+    hover: { scale: 1.05, rotate: [0, -2, 2, 0], transition: { duration: 0.3 } },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, type: "spring", stiffness: 100 } },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 } },
+  };
+
+  const iconVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, staggerChildren: 0.1 } },
+  };
+
   return (
     <StyledAbout className='about-me'>
-      <div className='container'>
+      <motion.div 
+        className='container'
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className='image-box'>
-          <img src={pfp} alt="Profile Picture" />
+          <motion.img 
+            src={pfp} 
+            alt="Profile Picture" 
+            variants={imageVariants} 
+            whileHover="hover"
+          />
         </div>
         <div className='text-box'>
-          <h1>Hi, I'm Yousef Bafayad</h1>
-          <p>
+          <motion.h1 variants={titleVariants}>Hi, I'm Yousef Bafayad</motion.h1>
+          <motion.p variants={textVariants}>
             An 18 Years old, front-end developer from Saudi Arabia.
-          </p>
-          <img src={healthBar} alt="Health Bar" draggable="false" />
+          </motion.p>
+          <motion.img variants={textVariants} src={healthBar} alt="Health Bar" draggable="false" />
         </div>
-        <div className='links'>
-          <a href="https://www.instagram.com/i_cabloi/">
+        <motion.div className='links' variants={iconVariants}>
+          <motion.a 
+            variants={iconVariants} 
+            href="https://www.instagram.com/i_cabloi/"
+            whileHover={{ scale: 1.2, y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <FontAwesomeIcon icon={faInstagram} size="2x" color='#DADBDD' />
-          </a>
-          <a href="https://github.com/cablooo">
+          </motion.a>
+          <motion.a 
+            variants={iconVariants} 
+            href="https://github.com/cablooo"
+            whileHover={{ scale: 1.2, y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <FontAwesomeIcon icon={faGithub} size="2x" color='#DADBDD' />
-          </a>
-          <a href="https://x.com/T_cablo">
+          </motion.a>
+          <motion.a 
+            variants={iconVariants} 
+            href="https://x.com/T_cablo"
+            whileHover={{ scale: 1.2, y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <FontAwesomeIcon icon={faXTwitter} size="2x" color='#DADBDD' />
-          </a>
-        </div>
-      </div>
+          </motion.a>
+        </motion.div>
+      </motion.div>
     </StyledAbout>
-  )
-}
+  );
+};
 
 const StyledAbout = styled(motion.div)`
   padding-top: 5rem;
@@ -42,14 +100,21 @@ const StyledAbout = styled(motion.div)`
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 10;
 
   .container {
     width: 50%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid #DADBDD;
-    padding-bottom: 2rem;
+    border: 1px solid rgba(218, 219, 221, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: none; /* Removed redundant border */
 
     .image-box {
       width: 100%;
@@ -63,12 +128,8 @@ const StyledAbout = styled(motion.div)`
         padding: 20px;
         border: 2px #4c4c4c solid;
         border-radius: 50%;
-        box-shadow: 0 0 8px #DADBDD;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.03);
-        }
+        animation: ${glow} 3s ease-in-out infinite; /* Added glow animation */
+        transition: none;
       }
     }
 
@@ -77,6 +138,9 @@ const StyledAbout = styled(motion.div)`
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: 10px;
 
       h1 {
         margin-bottom: 15px;
@@ -106,10 +170,9 @@ const StyledAbout = styled(motion.div)`
       align-items: center;
 
       a {
-        transition: transform 0.3s ease;
-
+        transition: none;
         &:hover {
-          transform: translateY(-3px);
+          transform: none;
         }
       }
     }
@@ -123,7 +186,6 @@ const StyledAbout = styled(motion.div)`
 
   @media (max-width: 768px) {
     padding-top: 3rem;
-
     .container {
       width: 90%;
       grid-template-columns: 1fr;
@@ -138,15 +200,12 @@ const StyledAbout = styled(motion.div)`
 
       .text-box {
         text-align: center;
-        
         h1 {
           font-size: 2rem;
         }
-
         p {
           font-size: 1rem;
         }
-
         img {
           width: 100%;
           margin: 20px auto 0;
@@ -178,13 +237,12 @@ const StyledAbout = styled(motion.div)`
 
       .links {
         max-width: 200px;
-        
         a {
           font-size: 1.5em;
         }
       }
     }
   }
-`
+`;
 
-export default About
+export default About;

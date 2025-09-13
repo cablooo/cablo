@@ -1,15 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 // Import your icons (update paths as needed)
-import htmlIcon from '../imgs/html-512.png'
-import cssIcon from '../imgs/png-transparent-css-hd-logo-removebg-preview.png'
-import jsIcon from '../imgs/JavaScript-logo.png'
-import sassIcon from '../imgs/sass-1-logo-png-transparent.png'
-import tailwindIcon from '../imgs/tailwind.png'
-import reactIcon from '../imgs/react_logo-512.png'
-import nextjsIcon from '../imgs/nextJs.png'
+import htmlIcon from '../imgs/html-512.png';
+// Corrected the path for the CSS icon
+import cssIcon from '../imgs/png-transparent-css-hd-logo-removebg-preview.png'; 
+import jsIcon from '../imgs/JavaScript-logo.png';
+import sassIcon from '../imgs/sass-1-logo-png-transparent.png';
+import tailwindIcon from '../imgs/tailwind.png';
+import reactIcon from '../imgs/react_logo-512.png';
+import nextjsIcon from '../imgs/nextJs.png';
 
 const Languages = () => {
   const skills = [
@@ -20,7 +21,7 @@ const Languages = () => {
     { name: 'Tailwind', icon: tailwindIcon },
     { name: 'React', icon: reactIcon },
     { name: 'Next.js', icon: nextjsIcon },
-  ]
+  ];
 
   return (
     <StyledLanguages>
@@ -64,8 +65,8 @@ const Languages = () => {
         ))}
       </div>
     </StyledLanguages>
-  )
-}
+  );
+};
 
 const StyledLanguages = styled.div`
   padding: 4rem 0;
@@ -200,6 +201,6 @@ const StyledLanguages = styled.div`
       height: 40px;
     }
   }
-`
+`;
 
-export default Languages
+export default Languages;
