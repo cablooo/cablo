@@ -11,6 +11,7 @@ import sassIcon from '../imgs/sass-1-logo-png-transparent.png';
 import tailwindIcon from '../imgs/tailwind.png';
 import reactIcon from '../imgs/react_logo-512.png';
 import nextjsIcon from '../imgs/nextJs.png';
+import pythonIcon from '../imgs/python.png';
 
 const Languages = () => {
   const skills = [
@@ -21,6 +22,7 @@ const Languages = () => {
     { name: 'Tailwind', icon: tailwindIcon },
     { name: 'React', icon: reactIcon },
     { name: 'Next.js', icon: nextjsIcon },
+    { name: 'Python', icon: pythonIcon },
   ];
 
   return (

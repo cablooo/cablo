@@ -59,7 +59,7 @@ const About = () => {
         <div className='text-box'>
           <motion.h1 variants={titleVariants}>Hi, I'm Yousef Bafayad</motion.h1>
           <motion.p variants={textVariants}>
-            An 18 Years old, front-end developer from Saudi Arabia.
+            An 19 Years old, front-end developer from Saudi Arabia.
           </motion.p>
           <motion.img variants={textVariants} src={healthBar} alt="Health Bar" draggable="false" />
         </div>

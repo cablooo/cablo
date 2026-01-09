@@ -1,8 +1,10 @@
 import reactIcon from './imgs/react_logo-512.png'
 import sassIcon from './imgs/sass-1-logo-png-transparent.png'
+import pythonIcon from './imgs/python.png'
 import ignite from './imgs/ignite.png'
 import musicApp from './imgs/musicapp.png'
 import kittyKingdom from './imgs/kitty kingdom.png'
+import trackerActivity from './imgs/tracker activity.png'
 import omdbCover from './imgs/Screenshot (18).png' // Make sure to add this image
 
 function projectsData() {
@@ -34,6 +36,13 @@ function projectsData() {
             url: 'https://cablooo.github.io/omdb/',
             icons: [reactIcon],
             cover: omdbCover,
+        }, 
+        {
+            name: 'Activity Tracker',
+            description: 'An activity tracker app to monitor daily mouse and keyboard usage',
+            url: 'https://cablooo.github.io/activity-tracker',
+            icons: [reactIcon, pythonIcon],
+            cover: trackerActivity,
         }
     ];
 }
