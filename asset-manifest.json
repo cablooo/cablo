@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/cablo/static/js/main.ca437094.js",
+    "main.js": "/cablo/static/js/main.f8681a1e.js",
     "static/js/453.8463039d.chunk.js": "/cablo/static/js/453.8463039d.chunk.js",
     "static/media/ignite.png": "/cablo/static/media/ignite.6cd0473d7c91f1b07c34.png",
     "static/media/Screenshot (18).png": "/cablo/static/media/Screenshot (18).2962dc3ff8f5c6eddb3f.png",
@@ -17,10 +17,10 @@
     "static/media/pfp.jpg": "/cablo/static/media/pfp.5e1a74cd9c2b503d0a3f.jpg",
     "static/media/JavaScript-logo.png": "/cablo/static/media/JavaScript-logo.266bd9fb2663dcc057b4.png",
     "index.html": "/cablo/index.html",
-    "main.ca437094.js.map": "/cablo/static/js/main.ca437094.js.map",
+    "main.f8681a1e.js.map": "/cablo/static/js/main.f8681a1e.js.map",
     "453.8463039d.chunk.js.map": "/cablo/static/js/453.8463039d.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.ca437094.js"
+    "static/js/main.f8681a1e.js"
   ]
 }
