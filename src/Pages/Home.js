@@ -6,8 +6,21 @@ import Languages from '../Components/Languages';
 import Projects from '../Components/Projects';
 import Footer from '../Components/Footer';
 import Cat from '../imgs/download copy.png';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+
 
 const Home = () => {
+
+  const aboutRef = useRef()
+  useGSAP(() => {
+    gsap.fromTo(aboutRef.current,
+      {opacity: 0, y: 5000},
+      {opacity: 1, y: 0, duration: 1, ease: "power2.out"}
+    )
+  }, [])
+
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -21,6 +34,7 @@ const Home = () => {
       
       {/* Apply animations to each component individually */}
       <motion.div
+      ref={aboutRef}
         key="about-section"
         variants={itemVariants}
         initial="hidden"
