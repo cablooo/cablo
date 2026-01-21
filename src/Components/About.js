@@ -20,10 +20,6 @@ const glow = keyframes`
 `;
 
 const About = () => {
-  const imageVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.05, rotate: [0, -2, 2, 0], transition: { duration: 0.3 } },
-  };
 
   const titleVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -48,22 +44,24 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
+        
+        <div className='text-box'>
+          <motion.h1 variants={titleVariants}>Yousef Bafayad</motion.h1>
+          <motion.h2 variants={titleVariants}>Front-End Developer & MIS Student</motion.h2>
+          <motion.p variants={textVariants}>
+            <p>I'm 19 years old</p>  and from Saudi Arabia.
+            I'm a front‑end developer, and I study MIS (Management Information Systems) in university.
+            I started learning web development when I was 13 years old, so I have about <p>6 years of experience. </p>
+            I enjoy making websites, improving my skills, and learning new things every day.
+          </motion.p>
+        </div>
         <div className='image-box'>
           <motion.img 
             src={pfp} 
             alt="Profile Picture" 
-            variants={imageVariants} 
-            whileHover="hover"
+            drag="false"
           />
-        </div>
-        <div className='text-box'>
-          <motion.h1 variants={titleVariants}>Hi, I'm Yousef Bafayad</motion.h1>
-          <motion.p variants={textVariants}>
-            An 19 Years old, front-end developer from Saudi Arabia.
-          </motion.p>
-          <motion.img variants={textVariants} src={healthBar} alt="Health Bar" draggable="false" />
-        </div>
-        <motion.div className='links' variants={iconVariants}>
+          <motion.div className='links' variants={iconVariants}>
           <motion.a 
             variants={iconVariants} 
             href="https://www.instagram.com/i_cabloi/"
@@ -89,6 +87,7 @@ const About = () => {
             <FontAwesomeIcon icon={faXTwitter} size="2x" color='#DADBDD' />
           </motion.a>
         </motion.div>
+        </div>
       </motion.div>
     </StyledAbout>
   );
@@ -104,14 +103,14 @@ const StyledAbout = styled(motion.div)`
   z-index: 10;
 
   .container {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid rgba(218, 219, 221, 0.2);
+    // border: 1px solid rgba(218, 219, 221, 0.2);
     border-radius: 15px;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    // background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-bottom: none; /* Removed redundant border */
@@ -119,6 +118,8 @@ const StyledAbout = styled(motion.div)`
     .image-box {
       width: 100%;
       display: flex;
+      flex-direction: column;
+      gap: 20px;
       justify-content: center;
       align-items: center;
 
@@ -137,20 +138,30 @@ const StyledAbout = styled(motion.div)`
       font-family: "Lora", serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       background: rgba(255, 255, 255, 0.03);
       padding: 1.5rem;
       border-radius: 10px;
 
       h1 {
-        margin-bottom: 15px;
-        font-size: 2.5rem;
+        font-size: 5rem;
         line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
       }
 
       p {
         font-size: 1.2rem;
         margin-bottom: 1rem;
+        
+        p {
+          display: inline;
+          color: #3d7cfa;
+        }
       }
 
       img {
