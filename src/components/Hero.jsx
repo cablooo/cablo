@@ -202,7 +202,7 @@ export default function Hero() {
               className="absolute -inset-3 rounded-full border border-dashed border-purple-500/30"
             />
             <img
-              src="/assets/images/profile.jpg"
+              src={`${import.meta.env.BASE_URL}assets/images/profile.jpg`}
               alt="Yousef Bafayad"
               className="w-full h-full object-cover rounded-full ring-4 ring-[#7C3AED] relative z-10"
               onError={(e) => {

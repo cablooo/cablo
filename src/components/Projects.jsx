@@ -1,33 +1,35 @@
 import { motion } from 'framer-motion'
 
+const base = import.meta.env.BASE_URL
+
 const projects = [
   {
     title: 'Moka Coffee',
-    image: '/assets/images/moka-coffee.png',
+    image: `${base}assets/images/moka-coffee.png`,
     desc: 'A modern specialty coffee shop landing page',
     url: 'https://cablooo.github.io/moka-coffee/',
   },
   {
     title: 'Kingdom Realty',
-    image: '/assets/images/real-estate.png',
+    image: `${base}assets/images/real-estate.png`,
     desc: 'A real estate listings platform for Saudi Arabia',
     url: 'https://cablooo.github.io/real-estate/',
   },
   {
     title: 'Zafaran Restaurant',
-    image: '/assets/images/zafaran.png',
+    image: `${base}assets/images/zafaran.png`,
     desc: 'An elegant Arabic restaurant website',
     url: 'https://cablooo.github.io/zafaran-restaurant/',
   },
   {
     title: 'Iron Peak Gym',
-    image: '/assets/images/iron-peak.png',
+    image: `${base}assets/images/iron-peak.png`,
     desc: 'A bold gym & fitness training website',
     url: 'https://cablooo.github.io/iron-peak/',
   },
   {
     title: 'Medical Center',
-    image: '/assets/images/medical-center.png',
+    image: `${base}assets/images/medical-center.png`,
     desc: 'A professional healthcare & medical website',
     url: 'https://cablooo.github.io/medical-center/',
   },

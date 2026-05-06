@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// ← Paste your Google Apps Script web app URL here after deploying
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyYeTHNWOCfVYo3lK3fT90mC0lFFcF5ZKMHC7sDBQf2v3fGMSB8CFRYjjztAM7Q_fEh/exec'
+const SHEET_URL = import.meta.env.VITE_SHEET_URL
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
