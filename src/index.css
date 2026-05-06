@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050508;
+  --color-surface: #0F0F1A;
+  --color-primary: #7C3AED;
+  --color-secondary: #F59E0B;
+  --color-text: #F1F1F1;
+  --color-muted: #8B8B9E;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050508;
+  /* Top purple ambient glow + subtle dot grid */
+  background-image:
+    radial-gradient(ellipse 80% 40% at 50% -5%, rgba(124, 58, 237, 0.18) 0%, transparent 100%),
+    radial-gradient(circle at 1px 1px, rgba(124, 58, 237, 0.07) 1px, transparent 0);
+  background-size: 100% 100%, 28px 28px;
+  color: #F1F1F1;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #050508; }
+::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 10px; }
+
+/* ── Cursor glow ── */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.07) 0%, transparent 65%);
+  /* IMPORTANT: transition on left/top — the JS sets these, not transform */
+  transition: left 0.1s ease, top 0.1s ease;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  will-change: left, top;
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.glass-card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #7C3AED 0%, #a855f7 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Purple glow (profile image) ── */
+.purple-glow {
+  box-shadow:
+    0 0 0 1px rgba(124, 58, 237, 0.3),
+    0 0 30px rgba(124, 58, 237, 0.4),
+    0 0 80px rgba(124, 58, 237, 0.2),
+    0 0 120px rgba(124, 58, 237, 0.08);
+}
+
+/* ── Decorative orb ── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Section padding */
+section {
+  padding: 5rem 0;
+  position: relative;
+}
